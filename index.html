@@ -16,7 +16,7 @@
 <audio id="song" preload="auto" loop src="music.mp3"></audio>
 <script>
 const video=document.getElementById('video'),song=document.getElementById('song'),overlay=document.getElementById('overlay'),musicButton=document.getElementById('musicButton'),hint=document.getElementById('hint');
-const startAt=90;
+const startAt=44;
 function message(s){hint.textContent=s;hint.classList.add('visible');setTimeout(()=>hint.classList.remove('visible'),3500)}
 function seekStart(){if(Number.isFinite(song.duration)&&song.duration>startAt){song.currentTime=startAt}else{song.currentTime=startAt}}
 function updateButton(){musicButton.textContent=song.paused?'▶':'♫';musicButton.setAttribute('aria-label',song.paused?'Play music':'Pause music');musicButton.title=song.paused?'Play music':'Pause music'}
